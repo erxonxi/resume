@@ -26,3 +26,14 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/resume:latest
+      - name: Deploy to Cluster RRP
+        uses: steebchen/kubectl@v2.0.0
+        with: # defaults to latest kubectl binary version
+          config: ${{ secrets.KUBE_CONFIG_DATA }}
+          command: set image --record deployment/resume container=${{ secrets.DOCKER_USERNAME }}/resume:latest
+      - name: Verify Deployment
+        uses: steebchen/kubectl@v2.0.0
+        with:
+          config: ${{ secrets.KUBE_CONFIG_DATA }}
+          version: v1.21.0 # specify kubectl binary version explicitly
+          command: rollout status deployment/resume
