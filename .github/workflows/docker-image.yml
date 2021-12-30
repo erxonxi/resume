@@ -26,6 +26,9 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/resume:latest
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to Cluster RRP
         uses: steebchen/kubectl@v2.0.0
         with: # defaults to latest kubectl binary version
