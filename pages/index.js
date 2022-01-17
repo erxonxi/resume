@@ -83,12 +83,8 @@ const Home = () => (
 					Biografia
 				</Heading>
 				<BioSection>
-					<BioYear>jul.2020 to dic.2021</BioYear>
+					<BioYear>jul.2020 to present</BioYear>
 					Nemon Inteligence In Bissness - Desarrollador Junior
-				</BioSection>
-				<BioSection>
-					<BioYear>ene.2022 to present</BioYear>
-					Nemon Inteligence In Bissness - Desarrollador Quality Assurance
 				</BioSection>
 			</Section>
 
