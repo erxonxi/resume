@@ -28,7 +28,7 @@ const Home = () => (
 				textAlign="center"
 				bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
 			>
-				¡Hola, soy un pequeño desarollador de España!
+				¡Hola, soy un pequeño desarrollador de España!
 			</Box>
 
 			<Box display={{ md: 'flex' }}>
@@ -36,7 +36,7 @@ const Home = () => (
 					<Heading as="h2" variant="page-title">
 						Rubén Ruiz
 					</Heading>
-					<p>Desarollador Web</p>
+					<p>Desarrollador Web</p>
 				</Box>
 				<Box
 					flexShrink={0}
@@ -80,7 +80,7 @@ const Home = () => (
 
 			<Section delay={0.2}>
 				<Heading as="h3" variant="section-title">
-					Biografia
+					Biografía
 				</Heading>
 				<BioSection>
 					<BioYear>jul.2020 to present</BioYear>
@@ -93,7 +93,7 @@ const Home = () => (
 					Pasiones
 				</Heading>
 				<Paragraph>
-					No solo el mundo del desarrollo me encanta, la parte de la arquitectura y sistemas también me fascina.
+					El mundo del desarrollo me encanta, aunque la parte de la arquitectura y sistemas también me fascina.
 					Gracias a últimos avances como Docker o Kubernetes se ha vuelto más sencillo hasta para los desarrolladores.
 					Y si hablamos de música, que decir, la música electrónica se ha ganado mi puesto número uno.
 				</Paragraph>

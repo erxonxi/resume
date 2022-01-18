@@ -21,9 +21,9 @@ const Work = () => (
         <Image src="/images/works/python-banner.png" alt="icon" />
       </Center>
       <P>
-        Es un servicio nos permite crear un usuario y logearnos. Al hacer
-        el login reciviremos un token ( JsonWebToken ), que nos permitira
-        hacceder a los endpoins que esten protegidos.
+        Es un servicio que nos permite crear un usuario y logearnos. Al hacer
+        el login recibiremos un token ( JsonWebToken ), que nos permitirá
+        acceder a los endpoins que esten protegidos.
       </P>
 
       <List ml={4} my={4}>
