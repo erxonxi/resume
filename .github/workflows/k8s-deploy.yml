@@ -1,6 +1,11 @@
 name: Deploy k8s
 
 on:
+  workflow_run:
+    workflows: ["Docker Image CI"]
+    branches: [master]
+    types: 
+      - completed
   push:
     branches: [ master ]
   pull_request:
