@@ -20,7 +20,7 @@ jobs:
          docker run -d --name db company/proprietary-db:1.2.3
      # build the application image
      - run: docker build -t rubenruiz/resume:cicleci .
-     # deploy the image
+     # deploy the image 
      - run: docker push rubenruiz/resume:cicleci
 
 workflows:
