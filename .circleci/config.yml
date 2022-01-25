@@ -1,0 +1,25 @@
+version: 2.1
+
+jobs:
+  build:
+   machine: true
+   steps:
+     - checkout
+     - run:
+          name: "Login DockerHub"
+          command: |
+            echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+            docker run -d --name service rubenruiz/resume
+            
+     - run:
+          name: "Build Image"
+          command: docker build -t rubenruiz/resume:cicleci .
+
+     - run:
+          name: "Publish Image DockerHub"
+          command: docker push rubenruiz/resume:cicleci
+
+workflows:
+  build-and-deploy:
+    jobs:
+      - build
