@@ -10,6 +10,7 @@ jobs:
           command: |
             echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
             docker run -d --name service rubenruiz/resume
+            
      - run:
           name: "Build Image"
           command: docker build -t rubenruiz/resume:cicleci .
